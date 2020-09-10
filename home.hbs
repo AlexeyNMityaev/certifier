@@ -1,0 +1,113 @@
+{{!< default}}
+
+
+<div class="{{post_class}}">
+
+<div class="blue-bg white-text">
+    <section class="common-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="text-block">
+                        <h1>Design, Build, Issue and Send Certificates to Anyone.</h1>
+                        <p>Everything you need to create high-quality certificates. <br class="desktop-only">Powerful features like builder, export in any formats, automatic email notifications with documents, and more.</p>
+                        <button class="btn btn-round btn-primary" data-toggle="modal" data-target="#earlyAccessModal">Get early access ></button>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-5 col-md-12">
+                    <div class="main-img">
+                        <img src="{{asset "images/home/main.svg"}}" alt="Certifier">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="common-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="list-block">
+                    <div class="icon-block">
+                        <img src="{{asset "images/home/design.svg"}}" alt="Design Certificates">
+                        <h5>Design<br>Certificates</h5>
+                    </div>
+                    <hr class="primary-line">
+                    <ul class="check-mark-list">
+                        <li>Professional pre-designed templates.</li>
+                        <li>Upload your own template and build from a scratch.</li>
+                        <li>Personalize copy, use branding and add variables.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="list-block">
+                    <div class="icon-block">
+                        <img src="{{asset "images/home/add.svg"}}" alt="Add Recipients">
+                        <h5>Add<br>Recipients</h5>
+                    </div>
+                    <hr class="primary-line">
+                    <ul class="check-mark-list">
+                        <li>Create courses, groups and recipient lists.</li>
+                        <li>Upload student and recipient lists using CSV files.</li>
+                        <li>Integrate via API with your educational software.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="list-block">
+                    <div class="icon-block">
+                        <img src="{{asset "images/home/send.svg"}}" alt="Send Certificates">
+                        <h5>Send<br>Certificates</h5>
+                    </div>
+                    <hr class="primary-line">
+                    <ul class="check-mark-list">
+                        <li>Send emails with certificates in a PDF.</li>
+                        <li>Export certificates to PNG, JPG and SVG formats.</li>
+                        <li>Manage certificates: update, revoke, or set expiry date.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-round btn-primary" data-toggle="modal" data-target="#earlyAccessModal">Get early access ></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<div class="modal fade" id="earlyAccessModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <img src="{{asset "images/common/modal-icon.svg"}}" alt="Get the notification">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="earlyAccessForm">
+                    <h5>Be the first to get notified!</h5>
+                    <p>Do not miss the upcoming launch.</p>
+                    <form class="early-access-form">
+                        <div class="form-group">
+                            <input type="email" name="_replyto" placeholder="Enter your email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-round btn-primary">Get the notification!</button>
+                        <div class="alert alert-danger" role="alert">
+                            Sorry, something went wrong. Please try again later.
+                        </div>
+                    </form>
+                </div>
+                <div class="thank-you-msg" id="earlyAccessTY">
+                    <h5>Thank you!</h5>
+                    <p class="margin0">You will get notified about our product soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

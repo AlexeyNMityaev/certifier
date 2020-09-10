@@ -1,0 +1,40 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours */
+    --color-primary: #F77E16;
+    --color-base: #000000;
+    --color-border: #797979;
+    --color-bg: #f5f5f5;
+    --color-bg-primary: #0035FF;
+    --color-success: #80b912;
+    --color-error: #f05230;
+    --color-primary-dark: #FD8800;
+
+    /* Fonts */
+    --font-sans-serif: 'Lato', sans-serif;
+    --font-serif: 'Lato', sans-serif;
+    --font-heding: 'Poppins', sans-serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+    --font-extra: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0.5rem;
+    --big-radius: 1.5rem;
+
+}

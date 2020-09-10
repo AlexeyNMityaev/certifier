@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>{{meta_title}}</title>
+
+    {{ghost_head}}
+    {{!-- Outputs important meta data and settings, should always be in <head> --}}
+
+</head>
+<body class="{{body_class}}">
+<div class="gh-viewport">
+
+<header id="gh-head" class="gh-head">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="gh-head-inner">
+
+                    <div class="gh-head-brand">
+                        <a class="gh-head-logo" href="{{@site.url}}">
+                            {{#if @site.logo}}
+                                <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                            {{else}}
+                                {{@site.title}}
+                            {{/if}}
+                        </a>
+                        <a class="gh-burger" role="button">
+                            <div class="gh-burger-box">
+                                <div class="gh-burger-inner"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="gh-head-menu">
+                        {{navigation}}
+                    </div>
+                    {{!-- <div class="gh-head-actions">
+                        <div class="gh-head-actions-list">
+                            {{#if @site.facebook}}
+                            <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                            {{/if}}
+                            {{#if @site.twitter}}
+                            <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                            {{/if}}
+                            <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                        </div>
+                    </div> --}}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="gh-main">
+
+    {{{body}}}
+    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+
+</main>
+
+<footer class="gh-foot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {{!-- <div class="gh-foot-menu">
+                    {{navigation}}
+                </div> --}}
+                <div class="gh-foot-meta">
+                    Copyright © 2020 Certifier.me
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+{{!-- <foot> --}}
+
+<script src="{{asset "built/jquery-3.4.1.min.js"}}"></script>
+<script src="{{asset "built/bootstrap.bundle.min.js"}}"></script>
+<script src="{{asset "built/scripts.js"}}"></script>
+
+{{#if pagination.pages}}
+<script>
+    var maxPages = parseInt('{{pagination.pages}}');
+</script>
+<script src="{{asset "built/infinitescroll.js"}}"></script>
+{{/if}}
+
+{{#is "post, page"}}
+<script src="{{asset "built/jquery.fitvids.js"}}"></script>
+<script>
+var images = document.querySelectorAll('.kg-gallery-image img');
+images.forEach(function (image) {
+    var container = image.closest('.kg-gallery-image');
+    var width = image.attributes.width.value;
+    var height = image.attributes.height.value;
+    var ratio = width / height;
+    container.style.flex = ratio + ' 1 0%';
+});
+$(document).ready(function () {
+    var $postContent = $(".gh-content");
+    $postContent.fitVids();
+});
+</script>
+{{/is}}
+
+{{ghost_foot}}
+{{!-- Outputs important scripts - should always be included before closing body tag --}}
+
+</body>
+</html>

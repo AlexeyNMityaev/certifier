@@ -1,0 +1,27 @@
+{{!< default}}
+
+<div class="gh-page">
+    <div class="gh-container">
+
+        <header class="gh-page-head">
+
+            <h1>Blog</h1>
+
+            <p>Get additional information about online education</p>
+
+            {{#if feature_image}}
+                <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
+            {{/if}}
+
+        </header>
+
+        <div class="gh-postfeed">
+        {{#foreach posts visibility="all"}}
+
+            {{> "card"}} {{!-- partials/card.hbs --}}
+
+        {{/foreach}}
+        </div>
+
+    </div>
+</div>

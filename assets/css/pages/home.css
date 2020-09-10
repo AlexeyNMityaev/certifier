@@ -1,0 +1,98 @@
+/* Home page
+/* ---------------------------------------------------------- */
+
+.blue-bg {
+    background: url('/assets/images/home/blue-bg.svg') center bottom no-repeat;
+    background-size: cover;
+}
+
+.text-block {
+    padding-top: 5vh;
+}
+
+.text-block h1, .text-block p {
+    margin-bottom: 2.5rem;
+}
+
+.main-img {
+    margin-top: -30vh;
+}
+
+.list-block {
+    padding: 0 4.5rem;
+}
+
+.icon-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon-block img {
+    margin-right: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.icon-block h5 {
+    line-height: 1.33em;
+}
+
+.primary-line {
+    border-top: 2px solid var(--color-primary-dark);
+    opacity: 0.2;
+    margin: 3rem 0;
+}
+
+.check-mark-list {
+    margin: 0 0 5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.check-mark-list li {
+    margin-bottom: 3rem;
+    padding-left: 7.5rem;
+    position: relative;
+}
+
+.check-mark-list li:before {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2.5rem;
+    content: '';
+    display: block;
+    background: url('/assets/images/home/check-mark.svg');
+}
+
+@media (max-width: 768px) {
+
+    .text-block {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-top: 0;
+    }
+
+    .main-img {
+        margin-top: 0;
+        overflow: hidden;
+        position: relative;
+        padding-top: 120%;
+        width: 100%;
+    }
+
+    .main-img img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .list-block {
+        padding: 0 2rem;
+    }
+
+}
